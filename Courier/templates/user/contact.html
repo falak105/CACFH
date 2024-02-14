@@ -1,0 +1,56 @@
+{%extends 'base.html'%}
+
+{% load static %}
+{%block content%}
+    <!--Content before waves-->
+    {% comment %} <div class="inner-header flex">
+   
+      <center>
+       <div class="container">
+         <div class="banner">
+           <h1>"Get in Touch with Christ University Courier Services"</h1>
+           <h3>Your opinions matter to us. Let us know how we can serve you better or share your positive experiences. Your feedback helps us improve and provides valuable insights into your courier service expectations.
+
+            Thank you for choosing Christ University Courier Services. We look forward to assisting you with all your delivery needs.</h3>
+           <h3>Feel free!</h3>
+         </div>
+     </center>
+       </div>  {% endcomment %}
+       
+       <!--Waves Container-->
+       {% comment %} <div>
+          
+       <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+       viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+       <defs>
+       <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+       </defs>
+       <g class="parallax">
+       <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+       <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+       <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+       <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+       </g>
+       </svg> 
+       </div> 
+      </div> {% endcomment %}
+     <center>
+       <h1 style="font-weight: bolder;"> Contact Us </h1><br>
+           <div class="container" >
+           <div class="banner" style="color: black; background-image:url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500) ;">
+            <h1>"Connect with Us"</h1>
+            <h3>Have a question, feedback, or need assistance? We're here to help! Reach out to the Christ University Courier Management team for any inquiries related to our services. Your satisfaction is our priority.</h3>
+                   <h3>Feel free!</h3>
+                 </div> 
+               <div class="form" style="border: 2px solid rgb(31,31,32);">
+                 <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
+                 <input type="email" autocomplete placeholder="Email">
+                 <input type="password" placeholder="Contact Number">
+                 <textarea placeholder="Message" style="width:80%; height: 15%;"></textarea><br>
+                 <button>Submit</button>
+               </div>
+             </div>
+           </div>
+   </center>
+         {% endblock content%}
+         

@@ -1,0 +1,243 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Admin Dashboard</title>
+</head> -->
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    header {
+        background-image: url('https://lavasa.christuniversity.in/images/histry-bnner.jpg');
+        background-size: cover;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 4fr; /* Updated grid-template-columns */
+        grid-template-rows: 1fr;
+        height: 100vh;
+    }
+
+    /* sidebar start */
+
+    .side-bar {
+        color: white;
+        background-color: rgba(25, 146, 212, 255);
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding: 15px 20px 20px 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-gap: 35px;
+        list-style-type: none;
+    }
+
+    .nav-heading {
+        font-weight: bold;
+        font-size: 20px;
+        grid-row: 1 / 2;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+        {% comment %} /* Added cursor pointer to indicate it's clickable */ {% endcomment %}
+    }
+
+    .dash-image {
+        width: 90px; /* Larger icon size */
+        padding-right: 20px;
+    }
+
+    .side-bar li {
+        font-weight: bold;
+        font-size: 20px;
+        grid-row: 1 / 2;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        {% comment %} /* Added cursor pointer to indicate it's clickable */ {% endcomment %}
+    }
+
+    .simple-icon {
+        width: 70px; /* Larger icon size */
+        margin-right: 20px;
+        transition: transform 0.3s ease; /* Added transition effect */
+    }
+
+    .simple-icon:hover {
+        transform: scale(1.2); /* Added hover effect */
+    }
+
+    .nav-bar {
+        grid-row: 2 / 3;
+    }
+
+    .nav-styles {
+        list-style-type: none;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .nav-styles li {
+        padding-bottom: 20px;
+    }
+
+    /* Align the text in the nav bar icons in center */
+    .nav-styles li a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+
+    section {
+        padding: 20px;
+        grid-column: 2 / 3; /* Added grid-column to position the section */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+
+    form {
+        margin-top: 20px;
+        font-size: 130%;
+    }
+
+    label,
+    select {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    select {
+        width: 30%;
+        padding: 10px;
+        font-size: 16px;
+        /* Adjust the font size */
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Courier Management System </h1>
+    </header>
+
+    {% comment %} <div class="container">
+        <!--sidebar start-->
+
+         <div class="side-bar">
+            <a href="testdashboard.html" class="nav-heading clickable">
+                <!-- Added anchor tag with href -->
+                Home
+            </a>
+             <div class="nav-bar">
+                <ul class="nav-list nav-styles">
+                    <li><a href="testgrievances.html">Grievances</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="testreports.html">Reports</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+        </div>  {% endcomment %}
+        <!--sidebar end-->
+
+        <section>
+            <h2>RECIPIENT DETAILS</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        {% comment %} <th>PARCEL ID</th> {% endcomment %}
+                        <th>Recipient's Email</th>
+                        <th>Recipient's Name</th>
+                        <th>Recipient's Contact</th>
+                        <th>Reg. No.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample data, replace with dynamic data from backend -->
+                    <tr>
+                        {% for r in recipient %}
+                        <td>{{r.email}}</td>
+                        <td>{{r.name}}</td>
+                        <td>{{r.phone}}</td>
+                        <td>{{r.reg_no}}</td>
+                    </tr>
+                        {% endfor %}
+                    
+                </tbody>
+            </table>
+
+         </section>
+    </div>
+    
+
+    <footer>
+        &copy; @Christ Courier Connect
+    </footer>
+
+</body>
+
+</html>

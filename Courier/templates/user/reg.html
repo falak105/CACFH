@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+   
+ <!--Content before waves-->
+ <div class="inner-header flex">
+    <!--Registration-->
+   <center>
+    <div class="container">
+      <div class="banner">
+        <h1>Unleash the potential, inspire the extraordinary</h1>
+        <h3>"Welcome to Christ University's Cutting-Edge Courier Management System. Streamlining delivery for both staff and students, our user-friendly website ensures swift and secure parcel services. Join us in fostering seamless connections and efficient deliveries across the campus community. Your parcels, our priority – delivering excellence at every doorstep."</h3>
+        <h3>Feel free!</h3>
+      </div>
+      <form class="form" method="post" style='width:auto'>
+        {% csrf_token %}
+        <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
+        <small>Have an Account? <a class="aa"  href="{% url 'index' %}"> Sign In</a></small>
+        <label for="choice">Select User Type:</label>
+        <select id="choice" name="choice" required>
+            <option value="user">Recipient</option>
+            <option value="staff">Staff</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="email" autocomplete placeholder="Email" id="Email" name="Email" >
+        <input type="name" autocomplete placeholder="Name" id="Name" name="Name" >
+        <input type="text" autocomplete placeholder="Phone Number" id="Phone_Number" name="Phone_Number">
+        <input type="text" autocomplete placeholder="Registration Number" id="Reg_No" name="Reg_No">
+        <input type="password" placeholder="Password" id="pass" name="pass" >
+        <input type="password" placeholder="Confirmm Password" id="cpass" name="cpass">
+        <button type="submit">Sign UP</button>
+        <a id="forgot" class="aa">Forgot Your Password?</a>
+      </form>
+    </div>
+  </center>
+  <!-- login ends -->    
+ 
+ <!-- login ends -->
+   </div>
+
+{% endblock content %}

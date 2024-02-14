@@ -1,0 +1,32 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    
+    <title>CMS</title>
+
+
+</head>
+<body>
+    <div class="navbar">
+    <label class="logo">CourierConnecT</label>
+    <nav>
+            <a class="hover" href="{% url 'index' %}">Home</a>
+            <a class= "hover" href="{% url 'about' %}">About</a>
+            <a class= "hover" href="{% url 'service' %}">Services</a>
+            <a class= "hover" href="{% url 'contact' %}">Contact</a>
+            
+        
+         </nav> 
+        </div>
+     {% block content %}
+
+     {% endblock content %}
+
+     <footer>
+        &copy; @Christ Courier Connect 
+    </footer>
+      
+</body>

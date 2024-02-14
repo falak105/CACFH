@@ -1,0 +1,96 @@
+{%extends 'base.html'%}
+
+{% load static %}
+{% block content %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    </style>
+
+    <h2>Parcel Return Form</h2>
+
+        <!-- Use appropriate action and method attributes based on your server-side implementation -->
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <!-- Use appropriate action and method attributes based on your server-side implementation -->
+    
+            <label for="parcelId">Parcel ID:</label>
+            <input type="text" placeholder="Parcel Id" id="pId" name="pId" required>
+    
+            <label for="returnOtp">Return OTP:</label>
+            <input type="text" placeholder="Return Otp" id="rOtp" name="rOtp" required>
+            
+            <label for="returnName">Recipient Name:</label>
+            <input type="text" placeholder="Name" id="rName" name="rName" required>
+            
+            <label for="expectedReturnDate">Expected Return Date:</label>
+            <input type="date" placeholder="Return Date" id="rDate" name="rDate" required>
+    
+            <label for="company">Select Company:</label>
+            <select id="company" name="company" required>
+                <option value="amazon">Amazon</option>
+                <option value="flipkart">Flipkart</option>
+                <option value="myntra">Myntra</option>
+                <option value="nykaa">Nykaa</option>
+                <option value="meesho">Meesho</option>
+               <option value="others">Others</option>
+               <br>
+               <br>
+               
+                <!-- Add more options as needed -->
+            </select>
+<<<<<<< HEAD
+            <button type="submit" ><a href={% url 'dashboard' %}>Submit Return Request</a></button>
+=======
+            <button type="submit" >Submit Return Request</button>
+>>>>>>> 3fc12d600ea3a14de890a5aff29cbc840d88ea34
+            </form>
+{% endblock content%}

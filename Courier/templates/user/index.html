@@ -1,0 +1,171 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+
+ <!--Content before waves-->
+ <div class="inner-header flex">
+  <!--log in-->
+  <center>
+   <div class="container">
+     <div class="banner">
+       <h1>Unleash the potential, inspire the extraordinary</h1>
+       <h3>"Welcome to Christ University's Cutting-Edge Courier Management System. Streamlining delivery for both staff and students, our user-friendly website ensures swift and secure parcel services. Join us in fostering seamless connections and efficient deliveries across the campus community. Your parcels, our priority – delivering excellence at every doorstep."</h3>
+     </div>
+     <form class="form" method="post">
+      {% csrf_token %}
+       <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
+       Need an Account? <a  class="aa" href="{% url 'reg' %}" >Sign Up</a>
+       <input type="email" autocomplete placeholder="Email" id="Email" name="Email">
+       <input type="password" placeholder="Password" id="pass" name="pass">
+       <button type="submit">Log In</button>
+       {% comment %} <a id="forgot" class="aa" href="{% url 'forgot_password' %}">Forgot Your Password?</a> {% endcomment %}
+       {% comment %} <a class= "hover" href= "{% url 'stafflogin' %}">STAFF LOGIN here </a> {% endcomment %}
+     </form>
+   </div>
+ </center>
+ <!-- login ends -->
+   </div>
+   
+   <!--Waves Container-->
+      
+   <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+   <defs>
+   <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+   </defs>
+   <g class="parallax">
+   <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+   <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+   <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+   <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+   </g>
+   </svg>
+   
+   </div>
+   <!--Waves end-->
+   
+   </div>
+   <!--Header ends-->
+    <!-- About us-->
+    <div class="about" id="about" style="color:black">
+     <h1 style="font-weight: bolder;">About us</h1>
+     <p>Christ Deemed To Be Univesity,Lavasa we understand the importance of seamless communication and efficient logistics within our campus. Introducing Christ Courier Connect, a dedicated courier delivery system tailored to meet the unique needs of our college community.</p>
+     <div class="btn"> <a class= "hover" href="{% url 'about' %}">Learn More</a></div>
+   </div>  
+   <!-- container-->
+   <div class="grids">
+     <div class="card-one">
+       <div class="card">
+         <div class="card_side card_side--front" id="front-1">
+           <div class="text-box">
+             <h3 class="text-box-top">Swift and Secure Handaling</h3>
+             <h1 class="text-box-middle">Service..</h1>
+             <h3 class="text-box-lower">Ensure timely and secure delivery of documents and packages across the campus</h3>
+           </div>
+         </div>
+         <div class="card_side card_side--back" id="back-1">
+           <div class="text-box">
+             <h3 class="text-box-top">Cards Flipped</h3>
+             <h1 class="text-box-middle">Great!</h1>
+             <h3 class="text-box-lower">--- More Text ---</h3>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="card-two">
+       <div class="card">
+         <div class="card_side card_side--front" id="front-2">
+           <div class="text-box">
+             <h3 class="text-box-top">Easy and Convenient.</h3>
+             <h1 class="text-box-middle">Excellence</h1>
+             <h3 class="text-box-lower"> Users can effortlessly place, track, and manage their courier requests</h3>
+           </div>
+         </div>
+         <div class="card_side card_side--back" id="back-2">
+           <div class="text-box">
+             <h3 class="text-box-top">Cards Flipped</h3>
+             <h1 class="text-box-middle">Great!</h1>
+             <h3 class="text-box-lower">--- More Text ---</h3>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="card-three">
+       <div class="card">
+         <div class="card_side card_side--front" id="front-3">
+           <div class="text-box">
+             <h3 class="text-box-top">Stay Informed</h3>
+             <h1 class="text-box-middle">Uprightness</h1>
+             <h3 class="text-box-lower">Know exactly where your package is in the delivery process.</h3>
+           </div>
+         </div>
+         <div class="card_side card_side--back" id="back-3">
+           <div class="text-box">
+             <h3 class="text-box-top">Cards Flipped</h3>
+             <h1 class="text-box-middle">Great!</h1>
+             <h3 class="text-box-lower">--- More Text ---</h3>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="card-four">
+       <div class="card">
+         <div class="card_side card_side--front" id="front-4">
+           <div class="text-box">
+             <h3 class="text-box-top"> From pickup to drop-off.</h3>
+             <h1 class="text-box-middle">Status..</h1>
+             <h3 class="text-box-lower">Stay in the loop every step of the way.</h3>
+           </div>
+         </div>
+         <div class="card_side card_side--back" id="back-4">
+           <div class="text-box">
+             <h3 class="text-box-top">Cards Flipped</h3>
+             <h1 class="text-box-middle">Great!</h1>
+             <h3 class="text-box-lower">--- More Text ---</h3>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="card-five">
+       <div class="card">
+         <div class="card_side card_side--front" id="front-5">
+           <div class="text-box">
+             <h3 class="text-box-top">Dedicated Support</h3>
+             <h1 class="text-box-middle">Assist..</h1>
+             <h3 class="text-box-lower"> Feel free to reach out for personalized assistance</h3>
+           </div>
+         </div>
+         <div class="card_side card_side--back" id="back-5">
+           <div class="text-box">
+             <h3 class="text-box-top">Cards Flipped</h3>
+             <h1 class="text-box-middle">Great!</h1>
+             <h3 class="text-box-lower">--- More Text ---</h3>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div><br><br>
+ <!--contact us-->
+ <center>
+   <div style="  background-image: url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500);">
+   <h1 style="font-weight: bolder; color: #fff;"> Contact Us </h1><br>
+   <div class="container" >
+     <div class="banner">
+       <h1>"Connect with Us"</h1>
+       <h3>Have a question, feedback, or need assistance? We're here to help! Reach out to the Christ University Courier Management team for any inquiries related to our services. Your satisfaction is our priority.</h3>
+     </div>
+   <div class="form" style="border: 2px solid rgb(31,31,32);">
+     <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
+     <input type="email" autocomplete placeholder="Email">
+     <input type="password" placeholder="Contact Number">
+     <textarea placeholder="Message" style="width:80%; height: 15%;"></textarea><br>
+     <button>Submit</button>
+   </div>
+ </div>
+</div>
+</center>
+
+{%endblock content%}
+

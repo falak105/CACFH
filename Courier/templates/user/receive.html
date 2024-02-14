@@ -1,0 +1,177 @@
+
+{% extends 'base.html' %}
+
+
+
+    
+{% load static %}
+<<<<<<< HEAD
+{% block content %}
+    
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    </head>
+    <style>
+            
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d1b1b;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+    
+        h2 {
+            color: #007bff;
+            margin-top: 20px;
+            
+        }
+    
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+    
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+    
+        button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        textarea {
+            resize: vertical;
+        }
+    </style>
+    <body>
+        {% comment %} <h2 style="text-align: center; justify-content: center; align-items: center; height: 100px;">ENTER YOUR PARCEL DETAILS</h2> {% endcomment %}
+
+    <h2>ENTER YOUR PARCEL DETAILS</h2>
+     
+    <form action="{% url 'receive' %}" method="post">
+        {% csrf_token %}
+       
+        <input type="text" id="parcelId" name="parcelId" placeholder="Parcel Id" required>
+        <input type="Email" id="recEmail" name="recEmail" required placeholder="Email"> 
+        <input type="text" id="recName" name="recName" required placeholder="Recipient's Name">
+        <input type="number" id="recContact" name="recContact" required placeholder="Recipient's Contact">
+        <input type="date" id="delDate" name="delDate" required placeholder="Delivery Date"><br>
+        <label for="courier-select" class="labe">Select Courier:</label>
+        <select id="company" name="company" required>
+           <option value="amazon">Amazon</option>
+           <option value="flipkart">Flipkart</option>
+           <option value="myntra">Myntra</option>
+           <option value="nykaa">Nykaa</option>
+           <option value="meesho">Meesho</option>
+           <option value="others">Others</option>
+        <br><br>
+       </select>
+        <button><a href="{% url 'dashboard' %}">Add </button>
+            
+           {% comment %} <div class="logout-container">
+               <button class="logout-btn" onclick="location.href='/logout'">Logout</button>
+           </div> {% endcomment %}
+      </div>
+    </div>
+    </div>
+<<<<<<< HEAD
+{% endblock content %}
+=======
+    {% endblock content %}
+  
+=======
+{%block content%}
+    <!--Content before waves-->
+    <div class="inner-header flex">
+   
+      <center>
+       <div class="container">
+         <div class="banner">
+           <h1>YOUR TEXT HERE</h1>
+           <h3>Here's the information, about your company, product, I don't know.</h3>
+           <h3>Feel free!</h3>
+         </div>
+     </center>
+       </div> 
+       
+       <!--Waves Container-->
+       <div>
+          
+       <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+       viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+       <defs>
+       <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+       </defs>
+       <g class="parallax">
+       <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+       <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+       <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+       <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+       </g>
+       </svg> 
+       </div> 
+      </div>
+     <center>
+       <h1 style="font-weight: bolder;"> Recipient Details </h1><br>
+           <div class="container" >
+           <div class="banner" style="color: black; background-image:url(https://images.pexels.com/photos/6169137/pexels-photo-6169137.jpeg?auto=compress&cs=tinysrgb&w=1500) ;">
+                   <h1>YOUR TEXT HERE</h1>
+                   <h3>Here's the information, about your company, product, I don't know.</h3>
+                   <h3>Feel free!</h3>
+                 </div> 
+                 <form action="{% url 'receive' %}" method="post" class="from">
+                  <!-- Use appropriate action and method attributes based on your server-side implementation -->
+                  {% csrf_token %}
+                 <img src="https://i.pinimg.com/236x/4d/a8/bb/4da8bb993057c69a85b9b6f2775c9df2.jpg" alt="profile" width="70">
+                 <input type="text" id="parcelId" name="parcelId" placeholder="Parcel Id" required>
+                 <input type="Email" id="recEmail" name="recEmail" required placeholder="Email"> 
+                 <input type="text" id="recName" name="recName" required placeholder="Recipient's Name">
+                 <input type="number" id="recContact" name="recContact" required placeholder="Recipient's Contact">
+                 <input type="date" id="delDate" name="delDate" required placeholder="Delivery Date"><br>
+                 <label for="courier-select" class="labe">Select Courier:</label>
+                 <select id="company" name="company" required>
+                    <option value="amazon">Amazon</option>
+                    <option value="flipkart">Flipkart</option>
+                    <option value="myntra">Myntra</option>
+                    <option value="nykaa">Nykaa</option>
+                    <option value="meesho">Meesho</option>
+                    <option value="others">Others</option>
+                    <!-- Add more options as needed --><br><br>
+                </select>
+                 <button>Add Parcel Details</button>
+               </div>
+             </div>
+           </div>
+   </center>
+         {% endblock content%}
+         
+>>>>>>> 8e421861f6f681883ff62adcc914f1ae3db68d80
+>>>>>>> 3fc12d600ea3a14de890a5aff29cbc840d88ea34

@@ -1,0 +1,277 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Admin Dashboard</title>
+</head> -->
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    header {
+        background-image: url('https://lavasa.christuniversity.in/images/histry-bnner.jpg');
+        background-size: cover;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 4fr; /* Updated grid-template-columns */
+        grid-template-rows: 1fr;
+        height: 100vh;
+    }
+
+    /* sidebar start */
+
+    .side-bar {
+        color: white;
+        background-color: rgba(25, 146, 212, 255);
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding: 15px 20px 20px 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-gap: 35px;
+        list-style-type: none;
+    }
+
+    .nav-heading {
+        font-weight: bold;
+        font-size: 20px;
+        grid-row: 1 / 2;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+        {% comment %} /* Added cursor pointer to indicate it's clickable */ {% endcomment %}
+    }
+
+    .dash-image {
+        width: 90px; /* Larger icon size */
+        padding-right: 20px;
+    }
+
+    .side-bar li {
+        font-weight: bold;
+        font-size: 20px;
+        grid-row: 1 / 2;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        {% comment %} /* Added cursor pointer to indicate it's clickable */ {% endcomment %}
+    }
+
+    .simple-icon {
+        width: 70px; /* Larger icon size */
+        margin-right: 20px;
+        transition: transform 0.3s ease; /* Added transition effect */
+    }
+
+    .simple-icon:hover {
+        transform: scale(1.2); /* Added hover effect */
+    }
+
+    .nav-bar {
+        grid-row: 2 / 3;
+    }
+
+    .nav-styles {
+        list-style-type: none;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .nav-styles li {
+        padding-bottom: 20px;
+    }
+
+    /* Align the text in the nav bar icons in center */
+    .nav-styles li a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+
+    section {
+        padding: 20px;
+        grid-column: 2 / 3; /* Added grid-column to position the section */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+
+    form {
+        margin-top: 20px;
+        font-size: 130%;
+    }
+
+    label,
+    select {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    select {
+        width: 30%;
+        padding: 10px;
+        font-size: 16px;
+        /* Adjust the font size */
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Courier Management System - Admin Module</h1>
+    </header>
+
+    <div class="container">
+        <!--sidebar start-->
+
+        <div class="side-bar">
+            <a href="testdashboard.html" class="nav-heading clickable">
+                <!-- Added anchor tag with href -->
+<<<<<<< HEAD
+                <h3><important><u>WELCOME ADMIN</u> </important> </h3>
+=======
+                <h3>WELCOME ADMIN </h3>
+>>>>>>> 3fc12d600ea3a14de890a5aff29cbc840d88ea34
+            </a>
+            <div class="nav-bar">
+                <ul class="nav-list nav-styles">
+                    <br>
+                    <br>
+                    <li><a href="{% url 'recipient' %}">USERS</a></li>
+<<<<<<< HEAD
+                    <br>
+                    <br>
+                    <li><a href="{% url 'parcel' %}">PARCEL DELIVERY </a></li>
+                    <br>
+                    <br>
+                    <li><a href="{% url 'retdet' %}"> PARCEL RETURN </a></li>
+                    <br>
+                    <br>
+                    <li><a href="{% url 'adminplot' %}"> DASHBOARD  </a></li>
+                    <br>
+                    <br>
+                    <li><a href="{% url 'index' %}">LOG OUT</a></li>
+                    <br>
+                    <br>
+=======
+                    <li><a href="{% url 'parcel' %}">PARCEL DETAILS</a></li>
+                    <li><a href="{% url 'adminplot' %}">DASHBOARD</a></li>
+                    <li><a href="{% url 'index' %}">LOG OUT</a></li>
+>>>>>>> 3fc12d600ea3a14de890a5aff29cbc840d88ea34
+                </ul>
+            </div>
+        </div>
+        <!--sidebar end-->
+
+
+
+<section style="padding: 20px; grid-column: 2 / 3; background-color: #f2f2f2; border-radius: 15px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+
+    <!-- Welcome Section -->
+    <div style="background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #333; font-size: 32px; margin-bottom: 20px; text-align: center;">Welcome, Administrator!</h2>
+        <p style="font-size: 20px; color: #666; text-align: center;">Manage your courier operations with ease using our intuitive Courier Management System. From tracking parcels to handling returns, you have everything you need at your fingertips.</p>
+    </div>
+
+    <!-- About Courier Management System -->
+    <div style="margin-top: 40px;">
+        <h2 style="font-size: 28px; color: #333;">About Courier Management System</h2>
+        <p style="font-size: 20px; color: #666;">Our Courier Management System is a robust platform designed to streamline the entire courier process. It offers features such as:</p>
+        <ul style="font-size: 20px; color: #666; margin-left: 30px;">
+            <li>Parcel tracking for real-time monitoring.</li>
+            <li>User management for efficient customer support.</li>
+            <li>Automated parcel delivery and return handling.</li>
+            <li>Comprehensive dashboard for analytics and insights.</li>
+        </ul>
+        <p style="font-size: 20px; color: #666;">With our system, you can optimize your courier operations, improve customer satisfaction, and stay ahead of the competition.</p>
+    </div>
+
+    <!-- Additional Features -->
+    <div style="margin-top: 40px;">
+        <h2 style="font-size: 28px; color: #333;">Additional Features</h2>
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <div style="background-color: #4CAF50; color: white; padding: 20px; border-radius: 10px; flex: 1; margin-right: 10px; text-align: center;">
+                <h3 style="font-size: 24px; margin-bottom: 10px;">Customizable Dashboard</h3>
+                <p style="font-size: 20px;">Tailor the dashboard to your specific needs and preferences for better insights.</p>
+            </div>
+            <div style="background-color: #f44336; color: white; padding: 20px; border-radius: 10px; flex: 1; margin-left: 10px; text-align: center;">
+                <h3 style="font-size: 24px; margin-bottom: 10px;">Advanced Reporting</h3>
+                <p style="font-size: 20px;">Generate detailed reports on parcel delivery, returns, and user activities for analysis.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+       
+    </div>
+   
+    <footer>
+        &copy; @Christ Courier Connect
+    </footer>
+
+</body>
+
+</html>

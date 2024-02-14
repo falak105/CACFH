@@ -1,0 +1,190 @@
+{% extends 'base.html'%}
+
+{% load static %}
+{% block content %}
+    <head>
+    <link rel="stylesheet" href="{% static 'dashstyle.css' %}">
+
+    </head>
+     <!-- for header part -->
+     <header>
+
+        <div class="logosec">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
+                class="icn menuicn" id="menuicn" alt="menu-icon">
+            <div class="logo">CourierConnecT</div>
+            
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <div class="searchbtn">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+                    class="icn srchicn" alt="search-icon">
+            </div>
+        </div>
+
+        <div class="message">
+            <div class="circle"></div>
+            <!-- <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" class="icn" alt=""> -->
+            <div class="dp">
+                <a href="{% url 'contact'%}"> 
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
+                    class="dpicn" alt="dp"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <div class="nav-option option1">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                            < class="nav-img" alt="dashboard">
+                        <h3> HELLO USER !</h3>
+                    </div>
+
+                    <div class="option2 nav-option">
+                        <a href="{% url 'receive' %}">PARCEL DETAILS</a>
+                    </div>
+
+                    <div class="option2 nav-option">
+<<<<<<< HEAD
+                        <a href="{% url 'profile'%}">PROFILE</a>
+=======
+                        <a href="#">PARCEL STATUS</a>
+>>>>>>> 3fc12d600ea3a14de890a5aff29cbc840d88ea34
+                    </div>
+{% comment %} 
+                    <div class="nav-option option3">
+
+                        <a href="parcelentry.html">Package Entry</a>
+                    </div> {% endcomment %}
+
+                    <div class="nav-option option4">
+
+                        <a href="{% url 'Return' %}">PARCEL RETURN</a>
+                    </div>
+                    <div class="nav-option option4">
+
+                        <a href="{% url 'index' %}">LOG OUT</a>
+                    </div>
+
+
+                    {% comment %} <div class="nav-option option5">
+
+                        <li><a href="parcelreturn.html">Report</a></li>
+                    </div> {% endcomment %}
+
+                    {% comment %} <div class="nav-option option6">
+
+                        <h3> Social Media</h3>
+                    </div>
+
+                    <div class="nav-option logout">
+                        <li><a class="active" href="index.html">Log Out</a></li>
+
+                        
+                    </div> {% endcomment %}
+
+                </div>
+            </nav>
+        </div>
+        <div class="main">
+
+            <div class="searchbar2">
+                <input type="text" name="" id="" placeholder="Search">
+                <div class="searchbtn">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
+                        class="icn srchicn" alt="search-button">
+                </div>
+            </div>
+
+            <div class="box-container">
+
+                <div class="box box1">
+                    <div class="text">
+                        <h2 class="topic-heading">Received</h2>
+                        <h2 class="topic">package</h2>
+                    </div>
+
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
+                        alt="Views">
+                </div>
+
+                <div class="box box2">
+                    <div class="text">
+                        <h2 class="topic-heading">Number</h2>
+                        <h2 class="topic">Of Packages</h2>
+                    </div>
+
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185030/14.png" alt="likes">
+                </div>
+
+                <div class="box box3">
+                    <div class="text">
+                        <h2 class="topic-heading">Send</h2>
+                        <h2 class="topic">Out Package</h2>
+                    </div>
+
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(32).png"
+                        alt="comments">
+                </div>
+
+                <div class="box box4">
+                    <div class="text">
+                        <h2 class="topic-heading">Return</h2>
+                        <h2 class="topic">Package</h2>
+                    </div>
+
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210185029/13.png" alt="published">
+                </div>
+            </div>
+            <div class="welcome-message" style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-top: 40px; text-align: center;">
+                <h2 style="color: #333; font-size: 24px; margin-bottom: 15px;">Welcome to CourierConnecT User Portal!</h2>
+                <p style="font-size: 18px; color: #666; margin-bottom: 10px;">Here you can manage your parcels and track their status.</p>
+                <p style="font-size: 18px; color: #666; margin-bottom: 10px;">Some of the features available to you:</p>
+                <ul style="font-size: 18px; color: #666; margin-left: 30px; list-style-type: disc;">
+                    <li>Track the status of your parcels.</li>
+                    <li>View delivery and return details.</li>
+                    <li>Update your contact information.</li>
+                    <li>Access support for any queries.</li>
+                </ul>
+                <p style="font-size: 18px; color: #666;">If you have any questions or need assistance, feel free to contact us.</p>
+            </div>
+            
+           
+
+                        <div class="item1">
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl label-tag"></h3>
+                        </div>
+
+                        <div class="item1">
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl"></h3>
+                            <h3 class="t-op-nextlvl label-tag"></h3>
+                        </div>
+                      
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script>
+        
+        let menuicn = document.querySelector(".menuicn"); 
+        let nav = document.querySelector(".navcontainer"); 
+        
+        menuicn.addEventListener("click", () => { 
+            nav.classList.toggle("navclose"); 
+        })
+
+     </script>
+    {% endblock content %}
